@@ -98,16 +98,16 @@ The architecture uses separate Adam optimizers for both networks (**LR = 0.001**
 - **Discriminator Update Frequency**: Adjusting update ratios impacted training stability, highlighting the importance of balanced feedback signals between networks.
 - **Loss Metrics vs. Visuals**: Generator and Discriminator loss curves fluctuated significantly; spatial coordinate visualizations provided a much clearer picture of convergence.
 
-## 📁 Directory Structure
+## Directory Structure
 
-.
-├── GAN.py # Generator and Discriminator class definitions
-├── train.py # Discriminator, Generator, and main GAN training functions
-├── sample.py # Synthetic data distribution generators
-├── plotting.py # Loss tracking, frame generation, and visualization utilities
-├── main.py # Entry point for configuration and training execution
-├── test/ # Unit and pipeline tests
-└── README.md # Project documentation
+
+├── GAN.py          # Generator and Discriminator class definitions
+├── train.py        # Discriminator, Generator, and main GAN training functions
+├── sample.py       # Synthetic data distribution generators
+├── plotting.py     # Loss tracking, frame generation, and visualization utilities
+├── main.py         # Entry point for configuration and training execution
+├── test/           # Unit and pipeline tests
+└── README.md       # Project documentation
 
 
 ##  Getting Started

@@ -102,11 +102,17 @@ The architecture uses separate Adam optimizers for both networks (**LR = 0.001**
 
 
 ├── GAN.py          # Generator and Discriminator class definitions
+
 ├── train.py        # Discriminator, Generator, and main GAN training functions
+
 ├── sample.py       # Synthetic data distribution generators
+
 ├── plotting.py     # Loss tracking, frame generation, and visualization utilities
+
 ├── main.py         # Entry point for configuration and training execution
+
 ├── test/           # Unit and pipeline tests
+
 └── README.md       # Project documentation
 
 

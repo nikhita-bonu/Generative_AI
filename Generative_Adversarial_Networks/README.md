@@ -2,7 +2,7 @@
 
 A PyTorch implementation of a Generative Adversarial Network (GAN) trained on 2D synthetic data distributions. This project focuses on understanding GAN dynamics, adversarial feedback, gradient flow, and mode collapse through controlled experiments rather than standard image datasets.
 
-## 📌 Project Overview
+## Project Overview
 
 This project implements a foundational GAN architecture from scratch to demonstrate core adversarial training mechanics.
 
@@ -13,7 +13,7 @@ This project implements a foundational GAN architecture from scratch to demonstr
 - **Controlled Gradient Flow**: Precise control over computation graphs using `detach()` during alternating optimization steps.
 - **Dynamic Visualizations**: Frame-by-frame sample generation and loss curve plots to monitor distribution alignment over time.
 
-## 🎯 Objectives
+## Objectives
 
 - Implement Generator and Discriminator architectures using PyTorch.
 - Master gradient flow management between networks using `.detach()`.
@@ -22,7 +22,7 @@ This project implements a foundational GAN architecture from scratch to demonstr
 - Investigate the impact of Discriminator update frequencies on convergence.
 - Visualize latent space transformations and training trajectory.
 
-## 🛠️ Architecture & Tech Stack
+## Architecture & Tech Stack
 
 **Tech Stack:** Python, PyTorch, NumPy, Matplotlib, ImageIO
 
@@ -60,7 +60,7 @@ Sigmoid
 Real / Fake Probability
 
 
-## 📊 Synthetic Datasets
+## Synthetic Datasets
 
 Rather than relying on image datasets, data points are generated programmatically in `sample.py` to test how effectively the Generator learns explicit modes:
 
@@ -68,7 +68,7 @@ Rather than relying on image datasets, data points are generated programmaticall
 - **Mixture of Two Gaussians** (`mixture`): Two distinct modes centered at `[2, 2]` and `[-2, -2]`.
 - **Mixture of Four Gaussians** (`mixture4`): Complex four-corner distribution centered at `[2, 2]`, `[2, -2]`, `[-2, 2]`, and `[-2, -2]` with a variance scale of `1.5`.
 
-## ⚙️ Training Details & Gradient Flow
+## Training Details & Gradient Flow
 
 The architecture uses separate Adam optimizers for both networks (**LR = 0.001**).
 
@@ -90,7 +90,7 @@ The architecture uses separate Adam optimizers for both networks (**LR = 0.001**
 | Update Ratio (D:G)            | 1 : 1                     |
 | Hardware                      | CUDA (if available) / CPU |
 
-## 🧪 Experiments & Key Insights
+## Experiments & Key Insights
 
 - **Single Gaussian Baseline**: The network easily converged to a single target mode.
 - **Multi-Modal Complexity**: Introducing multi-modal clusters (`mixture` and `mixture4`) produced dynamic adversarial behavior where the Generator experienced temporary mode collapse.
@@ -110,7 +110,7 @@ The architecture uses separate Adam optimizers for both networks (**LR = 0.001**
 └── README.md # Project documentation
 
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Installation
 
@@ -138,7 +138,7 @@ mode = "mixture"    # Two modes
 mode = "mixture4"   # Four modes
 ```
 
-## 📦 Output Artifacts
+## Output Artifacts
 
 Training visual artifacts are automatically exported:
 
@@ -146,7 +146,7 @@ Training visual artifacts are automatically exported:
 - `losses.png`: Plot tracking Generator and Discriminator loss trends.
 - `2d_gan_frame_by_frame.png`: Grid compilation of distribution progress over time.
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Implement Wasserstein GAN (WGAN) with Gradient Penalty (WGAN-GP).
 - Add Spectral Normalization to linear layers.
@@ -154,6 +154,6 @@ Training visual artifacts are automatically exported:
 - Perform systematic hyperparameter grid searches on D:G update ratios.
 - Add quantitative metric evaluations (e.g., Earth Mover's Distance).
 
-## 👤 Author
+## Author
 
 **Nikhita Bonu**
